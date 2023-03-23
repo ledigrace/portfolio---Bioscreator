@@ -10,11 +10,11 @@ header{
     position: sticky;
     top: 0;
 }
-nav img{
-    width: 33%;
-}
 .navbar-brand{
     width: 60%;
+}
+.navbar-brand img{
+    width: 33%;
 }
 ul li a{
     text-transform: uppercase;
