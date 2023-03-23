@@ -13,8 +13,8 @@ header{
 .navbar-brand{
     width: 60%;
 }
-.navbar-brand img{
-    width: 33%;
+.logo{
+    width:40%;
 }
 ul li a{
     text-transform: uppercase;
