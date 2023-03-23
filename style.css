@@ -5,6 +5,20 @@ body{
     margin: 0;
     padding: 0;
 }
+header{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
 nav img{
-    width: 15%;
+    width: 33%;
+}
+.navbar-brand{
+    width: 60%;
+}
+ul li a{
+    text-transform: uppercase;
+}
+.dl-now{
+    background-color: #F7F8FB;
 }
