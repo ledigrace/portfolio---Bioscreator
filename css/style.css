@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,500&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.navbar-brand{
+    width: 60%;
+}
+.logo{
+    width:40%;
+}
+ul li a{
+    text-transform: uppercase;
+    transition: ease-in-out 3s;
+}
+ul li a:hover{
+    text-transform: uppercase;
+    border-bottom: 1px solid #53A8E2;
+    transition: ease-in-out 3s;
+}
+.dl-now{
+    background-color: #F7F8FB;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.hero h1{
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+.hero strong{
+    letter-spacing: 4px;
+}
+.hero p{
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.hero a{
+    text-decoration: none;
+    background-color: #1a8cd8;
+    color: #fff;
+    padding: 16px 35px;
+    border: 1px solid #1a8cd8c0;
+    transition: .3s ease-in-out;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.hero a:hover {
+    margin: 0 40%;
+    color: #fff;
+    width: 22%;
+    background-color: #1a8cd8c0;
+    padding: 16px 35px;
+    text-decoration: none;
+    border: 1px solid #1a8cd8;
+    transition: .3s ease-in-out;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.hero img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.home-content{
+    margin: 10% 0;
+}
+.home-content h4{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin: 0 11%;
+}
+.home-content p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0 11%;
+}
+.home-content img{
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 400px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.dl-now{
+    padding: 2.5% 0;
+}
+.dl-now h3{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.dl-now a{
+    text-decoration: none;
+    background-color: #1a8cd8;
+    color: #fff;
+    padding: 15px 10px;
+    border: 1px solid #1a8cd8c0;
+    transition: .3s ease-in-out;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 200px;
+    margin: 3% 0;
+}
+.dl-now a:hover {
+    color: #fff;
+    width: 200px;
+    background-color: #1a8cd8c0;
+    padding: 15px 10px;
+    text-decoration: none;
+    border: 1px solid #1a8cd8;
+    transition: .3s ease-in-out;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 3% 0;
+}
+.testimonials{
+    margin: 10% 0;
+}
+.testimonials h4{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.swiper-wrapper{
+    padding: 5% 0;
+}
+.swiper-slide p{
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    margin: 3% 10%;
+}
+.swiper-slide img{
+    width: 6%;
+    margin: 2% 0;
+}
+footer{
+    background: #f5f6fa;
+    text-align: center;
+    padding:5% 0;
+    border-top: 1px solid #dfdfdf;
+}
+.footer-menu ul{
+    display: flex;
+    list-style: none;
+}
+.footer-menu ul li{
+    margin: 2%;
+}
+.footer-menu ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+}
+.footer-social ul{
+    display: flex;
+    list-style: none;
+}
+.footer-social ul li{
+    margin: 2%;
+}
+.footer-social ul li a{
+    color: #000;
+}
+.footer-social svg{
+    height: 22px;
+}
+.copyright a{
+    text-decoration: none;
+    color: #000;
+}
