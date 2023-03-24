@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </head>
 <body>
     <!-- header -->
@@ -111,6 +114,120 @@
         </div>
     </section>
 
+<!-- testinonials section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h3 class="text-center">Testimonials</h3>
+                </div>
+
+                <div class="col-md-12">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"One of the laptops that I repaired had a problem with the auto-on and no display issues. The issue was solved with the help of the stock EC firmware that I created. My laptop repair was made easier because of BiosCreator."</p>
+                            <div class="user">
+                                <img src="img\testimonials\adriankim.jpg" alt="Adrian Kim Babela">
+                                <span class="user-name">Adrian Kim Babela</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"No power fixed with the help of BiosCreator"</p>
+                            <div class="user">
+                                <img src="img\testimonials\demop.png" alt="Johnny Lopez">
+                                <span class="user-name">Johnny Lopez</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"I quickly fixed the on/off display using the bin file in Bioscreator. Participating in the LeakyMosfet training, joining the forum, and using Bioscreator were all very helpful to me as a laptop technician."</p>
+                            <div class="user">
+                                <img src="img\testimonials\demop.png" alt="">
+                                <span class="user-name"></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"The lenovo IdeaPad have no display. It fixed by disabling ram from patching Bios"</p>
+                            <div class="user">
+                                <img src="img\testimonials\demop.png" alt="Rey Manlupig">
+                                <span class="user-name">Rey Manlupig</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"I succesfully unlock the chromebook using Bioscreator"</p>
+                            <div class="user">
+                                <img src="img\testimonials\demop.png" alt="Eric villos">
+                                <span class="user-name">Mark Christian</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p class="copyright text-center">&copy; Vera Equinox Technologies, Inc. • <span class="terms"><a class="tp-text" href="#" >Terms</a></span> &amp; <a href="#">Privacy</a> • </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
 </body>
 </html>
