@@ -309,3 +309,29 @@ footer{
     padding: 16px 50px;
     transition: .25s ease-in-out;
 }
+.contact h1{
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0 0 30px;
+}
+.contact p{
+    font-size: 22px;
+}
+.sub button{
+    padding: 16px 40px;
+    border-radius: 50px;
+}
+.details h2{
+    font-weight: 300;
+    font-size: 28px;
+}
+.details li{
+    list-style: none;
+}
+.details ul li a{
+    text-transform: lowercase;
+    text-decoration: none;
+}
+.details .fa-envelope{
+    color: #000;
+}
