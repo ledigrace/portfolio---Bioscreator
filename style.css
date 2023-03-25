@@ -210,3 +210,76 @@ footer{
     text-decoration: none;
     color: #000;
 }
+.plan h1{
+    font-weight: 400;
+    font-size: 40px;
+}
+.plan p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+.plan-item{
+    padding: 40px;
+    box-shadow: 0 8px 15px 0 rgba(5, 57, 106, .06);
+    border: 1px solid #ffffff3b;
+}
+.plan-item h3{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px;
+    margin-left: 40px;
+}
+.plan-item span{
+    color: #900020;
+    font-size: 60px;
+    font-weight: 500;
+    padding: 20px;
+    margin-left: 31px;
+}
+.plan-item ul {
+    list-style: none;
+}
+.plan-item ul li{
+    padding: 20px 0;
+    font-size: 18px;
+}
+.buy1{
+    background: #8e8e8e;
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+.buy1:hover{
+    background: #adadad;
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+.buy1 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+}
+.buy2{
+    background: #4a4a4a;
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+.buy2:hover{
+    background: #5c5c5c;
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+.buy2 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+}
+.faq{
+    margin: 5%;
+}
+.faq a{
+    text-decoration: none;
+
+}
