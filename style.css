@@ -335,3 +335,36 @@ footer{
 .details .fa-envelope{
     color: #000;
 }
+.terms{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10%;
+}
+.terms h1{
+    font-weight: 500;
+    text-align: center;
+}
+.terms h6{
+    text-align: center;
+}
+.terms h3{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.privacy{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10%;
+}
+.privacy h1{
+    font-weight: 500;
+    text-align: center;
+}
+.privacy h6{
+    text-align: center;
+}
+.privacy h3{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 50px;
+}
