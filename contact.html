@@ -18,6 +18,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel=”stylesheet” href=”build/css/intlTelInput.css”>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- api spreadsheet -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+        <script>
+        function SubForm (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/KL7hiLLJVuiNs1Ce/',
+                type:'post',
+                data:$("#contact").serializeArray(),
+                success: function(){
+                alert("Form Data Submitted. Thank You :)")
+                },
+                error: function(){
+                alert("There was an error :(")
+                }
+                
+            });
+        }
+        async function fetchText(){
+            let url = 'https://ipinfo.io/210.23.187.171/json?token=bf1eedb09dfc46';
+            let response = await fetch(url);
+            let data = await response.json();
+
+            return data;
+        }
+        </script>
 </head>
 <body>
     <!-- header -->
@@ -63,7 +97,7 @@
 
             </div>
             <div class="col-md-6">
-                <form class="mt-5">
+                <form id="contact" class="mt-5">
                     <div class="form-group mt-5">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" id="name" name="name">
@@ -73,7 +107,7 @@
                         <input type="email" class="form-control" id="email" name="email">
                     </div>
                     <div class="form-group mt-5">
-                        <label for="number">Phone Number</label>
+                        <label for="number">Phone Number</label><br>
                         <input type="tel" class="form-control" id="number" name="number">
                     </div>
 
@@ -83,7 +117,7 @@
                     <input type="hidden" id="postal" name="postal" class="form-control">
                 </form>
                 <div class="sub d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary mt-5 mb-5">Submit</button>
+                    <button type="submit" onclick="SubForm()" class="btn btn-primary mt-5 mb-5">Submit</button>
                 </div>
             </div>
             <div class="col-md-3">
@@ -154,6 +188,103 @@
             </div>
         </div>
     </footer>
+
+    <script>
+          // fetch info from their ip address to spreadsheet using geogetinfo
+
+        GetGeoInfo();
+
+        async function GetGeoInfo(){
+        fetchText().then(function(value) {
+            displayResult(value);
+        })
+        }
+
+        function displayResult(value){
+        document.getElementById('city').value = value.city;
+        document.getElementById('postal').value = value.postal;
+        document.getElementById('country').value = value.country;
+        }
+
+        // end
+
+            //for phone input of contact form(intelinput and jquery mask)
+    function getIp(callback) {
+    fetch('https://ipinfo.io/210.23.187.171/json?token=bf1eedb09dfc46', { headers: { 'Accept': 'application/json' }})
+    .then((resp) => resp.json())
+    .catch(() => {
+        return {
+        country: 'us',
+        };
+    })
+    .then((resp) => callback(resp.country));
+    }
+
+    // initial country - auto and input mask
+    // Make sure to place this snippet in the footer or at least after
+    // the HTML input we're targeting.
+
+    $(document).ready(function() {
+    var phoneInputID = "#number";
+    var input = document.querySelector(phoneInputID);
+    var iti = window.intlTelInput(input, {
+        // allowDropdown: false,
+        // autoHideDialCode: false,
+        // autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        formatOnDisplay: true,
+        geoIpLookup: function(callback) {
+        $.get("https://ipinfo.io/210.23.187.171/json?token=bf1eedb09dfc46", function() {}, "jsonp").always(function(resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+        },
+        initialCountry: "auto",
+        // localizedCountries: { 'de': 'Deutschland' },
+        // nationalMode: false,
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        preferredCountries: ['es'],
+        // separateDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.14/js/utils.js"
+    });
+
+
+    $(phoneInputID).on("countrychange", function(event) {
+
+        // Get the selected country data to know which country is selected.
+        var selectedCountryData = iti.getSelectedCountryData();
+
+        // Get an example number for the selected country to use as placeholder.
+        newPlaceholder = intlTelInputUtils.getExampleNumber(selectedCountryData.iso2, true, intlTelInputUtils.numberFormat.INTERNATIONAL),
+
+        // Reset the phone number input.
+        iti.setNumber("");
+
+        // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s
+        mask = newPlaceholder.replace(/[1-9]/g, "0");
+
+        // Apply the new mask for the input
+        $(this).mask(mask);
+    });
+
+
+    // When the plugin loads for the first time, we have to trigger the "countrychange" event manually,
+    // but after making sure that the plugin is fully loaded by associating handler to the promise of the
+    // plugin instance.
+
+    iti.promise.then(function() {
+        $(phoneInputID).trigger("countrychange");
+    });
+
+    });
+
+    function isNotEmpty(value) {
+    if (value == null || typeof value == 'undefined' ) return false;
+    return (value.length > 0);
+    }
+    </script>
 
         <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
