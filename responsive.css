@@ -1,0 +1,132 @@
+
+@media (max-width: 480px) {
+    .intro-bios2 {
+        flex-direction: column-reverse;
+    }
+    .intro-bios2 .col-md-6 {
+        width: 100%; /* Make each column take full width */
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-bios4 {
+        flex-direction: column-reverse;
+    }
+    .intro-bios4 .col-md-6 {
+        width: 100%; /* Make each column take full width */
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        width: 80%;
+    }
+
+    .home-content img {
+        max-width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero a {
+        font-size: 15px;
+        padding: 13px 25px;
+    }
+
+    .hero img {
+        width: 80%;
+    }
+
+    .home-content h4 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+    }
+    .dl-now h3{
+        font-size: 24px;
+    }
+    .dl-now a{
+        font-size: 15px;
+    }
+    .testimonials h4{
+        font-size: 24px;
+    }
+    .swiper-slide p{
+        font-size: 15px;
+    }
+    footer p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .intro-bios2 {
+        flex-direction: column-reverse;
+    }
+    .intro-bios2 .col-md-6 {
+        width: 100%; /* Make each column take full width */
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-bios4 {
+        flex-direction: column-reverse;
+    }
+    .intro-bios4 .col-md-6 {
+        width: 100%; /* Make each column take full width */
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        width: 80%;
+    }
+
+    .home-content img {
+        max-width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero a {
+        font-size: 15px;
+        padding: 13px 25px;
+    }
+
+    .hero img {
+        width: 80%;
+    }
+
+    .home-content h4 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+    }
+    .dl-now h3{
+        font-size: 24px;
+    }
+    .dl-now a{
+        font-size: 15px;
+    }
+    .testimonials h4{
+        font-size: 24px;
+    }
+    .swiper-slide p{
+        font-size: 15px;
+    }
+    footer p{
+        font-size: 12px;
+    }
+}
